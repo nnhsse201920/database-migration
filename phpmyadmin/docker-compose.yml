@@ -1,30 +1,30 @@
 version: '2'
 
-  volumes:
-    db:
+volumes:
+  db:
 
-  services:
-    db:
-      image: mariadb
-      command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
-      restart: always
-      volumes:
-        - db:/var/lib/mysql
-      environment:
-        - MYSQL_ROOT_PASSWORD=1234osradar
-        - MYSQL_PASSWORD=1234osradar
-        - MYSQL_DATABASE=example    
-        - MYSQL_USER=osradar
+services:
+  db:
+    image: mariadb
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234osradar
+      - MYSQL_PASSWORD=1234osradar
+      - MYSQL_DATABASE=example    
+      - MYSQL_USER=osradar
   app:
-     image: phpmyadmin/phpmyadmin
-     container_name: phpmyadmin
-     environment:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
       - PMA_ARBITRARY=1
-     restart: always
-     links:
+    restart: always
+    links:
       - db
-     ports:
+    ports:
       - 8080:80
-     volumes:
+    volumes:
       - /sessions
-      
+    
