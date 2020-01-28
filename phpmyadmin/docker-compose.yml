@@ -1,20 +1,17 @@
 version: '2'
 
-volumes:
-  db:
-
 services:
   db:
     image: mariadb
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
-      - db:/var/lib/mysql
+      - ./db:/docker-entrypoint-initdb.d/:ro
     environment:
-      - MYSQL_ROOT_PASSWORD=1234osradar
-      - MYSQL_PASSWORD=1234osradar
-      - MYSQL_DATABASE=example    
-      - MYSQL_USER=osradar
+      - MYSQL_ROOT_PASSWORD=database7
+      - MYSQL_PASSWORD=database7
+      - MYSQL_DATABASE=registart  
+      - MYSQL_USER=registart
   app:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
@@ -27,4 +24,5 @@ services:
       - 8080:80
     volumes:
       - /sessions
+      
     
