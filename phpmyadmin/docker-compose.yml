@@ -9,9 +9,7 @@ services:
       - ./db:/docker-entrypoint-initdb.d/:ro
     environment:
       - MYSQL_ROOT_PASSWORD=database7
-      - MYSQL_PASSWORD=database7
-      - MYSQL_DATABASE=registart  
-      - MYSQL_USER=registart
+    
   app:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin

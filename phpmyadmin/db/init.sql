@@ -19,8 +19,8 @@
 -- Table structure for table 'assignments'
 --
 CREATE DATABASE registart;
---CREATE USER 'registart'@'%' identified by 'database7';
---GRANT ALL PRIVILEGES on registart.* to 'registart'@'%';
+CREATE USER 'registart'@'%' identified by 'database7';
+GRANT ALL PRIVILEGES on registart.* to 'registart'@'%';
 use registart;
 
 DROP TABLE IF EXISTS 'assignments';
