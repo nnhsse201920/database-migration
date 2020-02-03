@@ -26,11 +26,11 @@ use registart;
 
 
 
-DROP TABLE IF EXISTS 'assignments';
+DROP TABLE IF EXISTS assignments;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE 'assignments' (
-  'OrganizerID' int(11) NOT NULL,
+CREATE TABLE assignments (
+  OrganizerID int(11) NOT NULL,
   StudentID int(11) NOT NULL,
   LastContact datetime DEFAULT NULL,
   Status int(11) NOT NULL,
