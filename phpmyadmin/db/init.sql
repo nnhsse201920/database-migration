@@ -8,13 +8,11 @@
 --
 -- Table structure for table assignments'
 --
+DROP DATABASE IF EXISTS registart;
 CREATE DATABASE registart;
 CREATE USER 'registart'@'%' identified by 'database7';
 GRANT ALL PRIVILEGES on registart.* to 'registart'@'%';
 use registart;
-
-
-
 
 DROP TABLE IF EXISTS assignments;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
