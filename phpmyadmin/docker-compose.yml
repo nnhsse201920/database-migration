@@ -5,13 +5,11 @@ services:
     image: mariadb
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
-    volumes:
-      - ./db:/docker-entrypoint-initdb.d/:ro
     environment:
       - MYSQL_ROOT_PASSWORD=database7
-      - MYSQL_PASSWORD=database7
-      - MYSQL_DATABASE=registart  
-      - MYSQL_USER=registart
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d/:ro
+    
   app:
     image: phpmyadmin/phpmyadmin
     container_name: phpmyadmin
