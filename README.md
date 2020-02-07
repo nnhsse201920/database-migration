@@ -11,6 +11,7 @@ CREATE DATABASE:
 LOGIN TO DATABASE USING PHPMYADMIN:
 1. In a web browser type  http://localhost:8080
 2. Login
+Leave the Server blank
 Username: registart
 Password: database7
 
