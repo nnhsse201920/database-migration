@@ -21,7 +21,7 @@ ALTERING DATABASE:
     2. Find and click on the SQL tab on the upper panel
     3. To insert data individually: 
         a. Run the command INSERT INTO tablename VALUES (value1, value2, value3)
-        For example: INSERT INTO students VALUES (“Mehak”,”Ahuja”,12345 ,”msahuja@stu.naperville203.org”, 6304325765);
+        For example: INSERT INTO students VALUES ('Mehak','Ahuja',12345 ,'msahuja@stu.naperville203.org', 6304325765);
     4. To insert large-amounts of data from a text file
         a. Create Text file
         b. Separate column values with commas
