@@ -1,3 +1,6 @@
+Andrew, Osepek, 12345, asosepek@stu.naperville203.org, 12345678
+Mehak, Ahuja, 12345, msahuja@stu.naperville203.org , 6304325765
+Daniel, Zhao, Null, Null, Null
 Samantha, Brigida, , ,
 Stuart, Brown, , ,
 William, Bruce, , ,
