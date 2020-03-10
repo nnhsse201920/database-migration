@@ -8,6 +8,12 @@
 --
 -- Table structure for table assignments'
 --
+DROP DATABASE IF EXISTS spring_app_db;
+CREATE DATABASE spring_app_db;
+CREATE USER 'app_user'@'%' identified by 'database7';
+GRANT ALL PRIVILEGES on spring_app_db.* to 'app_user'@'%';
+use spring_app_db;
+
 DROP DATABASE IF EXISTS registart;
 CREATE DATABASE registart;
 CREATE USER 'registart'@'%' identified by 'database7';

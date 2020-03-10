@@ -7,6 +7,8 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=database7
+    ports:
+      - 3306:3306
     volumes:
       - ./db:/docker-entrypoint-initdb.d/:ro
     
@@ -19,18 +21,8 @@ services:
     links:
       - db
     ports:
-      - 3306:3306
+      - 8080:80
     volumes:
       - /sessions
-  spring -boot-jpa-app :
-    image: spring-boot-jpa-image
-    build:
-    context: ./
-    dockerfile: Dockerfile
-    depends_on:
-      -db
-    ports:
-      - 8081:8081
-    volumes:
-      - /data/spring-boot-app
-    
+
+  
