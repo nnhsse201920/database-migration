@@ -5,9 +5,10 @@
 2. Clone database-migration repository
 3. Open VS Code
         a. Make sure you’re in the right directory( Ex: PS C:\Users\MSAhuja\GitHub\database-migration\phpmyadmin> )
-4. Create Docker container for database and for app (2 commands, run each one in vs code terminal)
+4. Create Docker container for database and for app (3 commands, run each one in vs code terminal)
     1. docker-compose up -d --build --force-recreate --renew-anon-volumes db
-    2. docker-compose up -d --build --force-recreate --renew-anon-volumes app
+    2. docker-compose up -d --build app
+    3. docker-compose up -d --build spring-boot-jpa-app
 *The -d hides the actions taking place; if the code isn’t working, remove the -d so that you can see where the error is occuring * 
 
 
@@ -45,5 +46,14 @@
     a. you need to name your own backup file so that your changes are stored in a different sql file
 2. Push changes to GitHub 
 
+*BUILDING THE SPRING EXAMPLE:
+1. Open the api folder in IntelliJ.
+2. Click on "Add Configuration". Click on the "+" icon. Select Maven.
+3. Specify "clean install -DskipTests" for the Command Line field. Click on the OK button.
+4. Click on the Run icon.
+5. The JAR file will be built in the targets folder.
 
+*CONNECT TO DATABASE USING SPRING API:
+1. In a web browser connect to:  http://localhost:8081/api/users
+2. Alternatively, download and install [Postman](https://learning.postman.com/docs/postman/launching-postman/installation-and-updates/) to make is easier to interact with the Spring API.
 
