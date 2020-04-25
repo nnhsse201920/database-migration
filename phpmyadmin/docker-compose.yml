@@ -24,7 +24,7 @@ services:
       - 8080:80
     volumes:
       - /sessions
-  spring-boot-jpa-app :
+  spring-boot-jpa-app:
     image: spring-boot-jpa-image
     build: ./api
     links:
